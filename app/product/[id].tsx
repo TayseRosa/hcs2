@@ -24,8 +24,12 @@ export default function Screen(){
                     resizeMode="cover"
                 />
 
-                <Text> {product.title} </Text>
-                <Text> {product.description} </Text>
+                <Text style={styles.title}> {product.title} </Text>
+                <Text style={styles.description}> {product.description} </Text>
+
+                <View style={styles.priceArea}>
+                    <Text style={styles.price}>R${product.price.toFixed(2)}</Text>
+                </View>
             </ScrollView>
 
             <View style={styles.buttonArea}>
@@ -54,5 +58,25 @@ const styles = StyleSheet.create({
         height:250,
         borderRadius:10,
         marginBottom:20
+    },
+    title:{
+        fontSize:27,
+        fontWeight:'bold',
+        marginBottom:0
+    },
+    description:{
+        fontSize:15,
+        color:'#555',
+        marginBottom:20
+    },
+    priceArea:{
+        padding:10,
+        borderRadius:10,
+        backgroundColor:'#ccc',
+
+    },
+    price:{
+        fontSize:22,
+        textAlign:'center'
     }
 })
