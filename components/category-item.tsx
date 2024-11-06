@@ -1,5 +1,5 @@
 import { Pressable, Text, StyleSheet, Image, View } from "react-native"
-import { Link } from "expo-router"
+import { Link, router } from "expo-router"
 import { Category } from "../types/category"
 
 type Props = {
