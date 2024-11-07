@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { StyleSheet,View, Text, Image, Button, TextInput } from "react-native";
 
 export default()=>{
-    const [name, setName] = useState('');
-    const [cargo, setCargo] = useState('');
+    const [name, setName] = useState('Hugo Costa');
+    const [cargo, setCargo] = useState('Administrador');
 
     return(
         <View style={styles.container}>
@@ -11,13 +11,13 @@ export default()=>{
 
                 <View style={styles.profile}>
                     <View >
-                        <Image style={styles.profilePhoto} source={require('../../assets/euProfile.png')}/>
+                        <Image style={styles.profilePhoto} source={require('../../assets/profile.png')}/>
                     </View>
                 </View>
 
                 <View style={styles.containerName}>
-                    <Text style={styles.name}>Tayse Rosa</Text>
-                    <Text style={styles.cargo}>Administrador</Text>
+                    <Text style={styles.name}> {name} </Text>
+                    <Text style={styles.cargo}> {cargo} </Text>
                 </View>
 
                 <View>
@@ -25,14 +25,14 @@ export default()=>{
                         onChangeText={t => setName(t)}
                         value={name}
                         style={styles.textInput}
-                        placeholder="Tayse Rosa"
+                        placeholder=""
                     />
 
                     <TextInput
                         onChangeText={t => setCargo(t)}
                         value={cargo}
                         style={styles.textInput}
-                        placeholder="Administrador"
+                        placeholder=""
                     />
                 </View>
 
@@ -45,7 +45,7 @@ export default()=>{
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor:'#00547A',
+        backgroundColor:'#fff',
         flex:1,
         justifyContent:'center',
         alignItems:'center'

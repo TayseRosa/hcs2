@@ -2,17 +2,21 @@ import FontAwesome from '@expo/vector-icons/FontAwesome5'
 import { Tabs } from "expo-router";
 
 export default function TabLayout(){
+
     return(
         <Tabs
-            screenOptions={{
-                tabBarActiveTintColor:'blue'
-            }}
+        screenOptions={{
+            tabBarActiveTintColor:'#ffffff',
+            tabBarStyle:{
+             backgroundColor:'#00547A',
+            }
+        }}            
         >
             <Tabs.Screen 
-                name="home" 
+                name="home"
                 options={{
-                    title:'Inicio',
-                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color}/>
+                    headerShown:false,
+                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />
                 }}
             />
 
@@ -20,20 +24,30 @@ export default function TabLayout(){
                 name="categories" 
                 options={{
                     title:'Categorias',
-                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="archive" color={color}/>,
+                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="tshirt" color={color}/>,
                     headerShown:false
                 }}
                 
             />
 
             <Tabs.Screen 
-                name="about" 
+                name="profile" 
                 options={{
-                    title:'Sobre',
-                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="user" color={color}/>,
-                    headerShown:false
+                    title:'Editar perfil',
+                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="user-circle" color={color}/>,
                 }}
             />
+
+            <Tabs.Screen 
+                name="newClient" 
+                options={{
+                    title:'Novo cliente',
+                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="user" color={color}/>,
+                    headerShown:false
+                }}                
+            />
+
+
         </Tabs>
     )
 }
