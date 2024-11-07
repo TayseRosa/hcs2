@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { StyleSheet,View, Text, Button, TextInput, ScrollView } from "react-native";
 
 export default()=>{
-    const [ produto, setProduto ] = useState('');
-    const [ quilos, setQuilos ] = useState('');
-    const [ valUnit, setValUnit ] = useState('');
-    const [ valTotal, setValTotal ] = useState('');
-    const [ rendimento, setRendimento ] = useState('');
-    const [ risco, setRisco ] = useState('');
-    const [ corte, setCorte ] = useState('');
-    const [ faccao, setFaccao ] = useState('');
+    const [ acabamento, setAcabamento ] = useState('');
+    const [ bordado, setBordado ] = useState('');
+    const [ estampa, setEstampa ] = useState('');
+    const [ valorFinal, setValorFinal ] = useState('');
+    const [ precoFinalizada, setPrecoFinalizada ] = useState('');
+    const [ precoVenda, setPrecoVenda ] = useState('');
+    const [ lucroPeca, setLucroPeca ] = useState('');
+    const [ lucroTotal, setLucroTotal ] = useState('');
 
     return(
         <View style={styles.container}>
@@ -18,62 +18,62 @@ export default()=>{
                 <Text style={styles.subtitle}>Continua... </Text>       
 
                 <TextInput
-                    onChangeText={t=>setProduto}
-                    value={produto}
+                    onChangeText={t=>setAcabamento}
+                    value={acabamento}
                     style={styles.input}
-                    placeholder="Produto:"
+                    placeholder="Acabamento(com papelão):"
                 />
 
                 <TextInput
-                    onChangeText={t=>setQuilos}
-                    value={ quilos }
+                    onChangeText={t=>setBordado}
+                    value={ bordado }
                     style={styles.input}
-                    placeholder="Quilos / metros:"
+                    placeholder="Bordado:"
                 />
 
                 <TextInput
-                    onChangeText={t=>setValUnit}
-                    value={ valUnit }
+                    onChangeText={t=>setEstampa}
+                    value={ estampa }
                     style={styles.input}
-                    placeholder="Valor unitário:"
+                    placeholder="Estampa:"
                 />
 
                 <TextInput
-                    onChangeText={t=>setValTotal}
-                    value={ valTotal }
+                    onChangeText={t=>setValorFinal}
+                    value={ valorFinal }
                     style={styles.input}
-                    placeholder="Valor total:"
+                    placeholder="Valor Final:"
                 />
 
                 <TextInput
-                    onChangeText={t=>setRendimento}
-                    value={ rendimento }
+                    onChangeText={t=>setPrecoFinalizada}
+                    value={ precoFinalizada }
                     style={styles.input}
-                    placeholder="Rendimento de peças"
+                    placeholder="Preço peça finalizada"
                     multiline={true}
                 />
 
 <TextInput
-                    onChangeText={t=>setRisco}
-                    value={risco}
+                    onChangeText={t=>setPrecoVenda}
+                    value={precoVenda}
                     style={styles.input}
-                    placeholder="Risco:"
+                    placeholder="Preço venda PL:"
                     multiline={true}
                 />
 
 <TextInput
-                    onChangeText={t=>setCorte}
-                    value={corte}
+                    onChangeText={t=>setLucroPeca}
+                    value={lucroPeca}
                     style={styles.input}
-                    placeholder="Corte:"
+                    placeholder="Lucro por peça:"
                     multiline={true}
                 />
 
 <TextInput
-                    onChangeText={t=>setFaccao}
-                    value={faccao}
+                    onChangeText={t=>setLucroTotal}
+                    value={lucroTotal}
                     style={styles.input}
-                    placeholder="Facção:"
+                    placeholder="Lucro total:"
                     multiline={true}
                 />
 
