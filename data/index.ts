@@ -9,18 +9,23 @@ export const data: Data = {
     categories: [
         {
             id: 1,
-            title: 'Eletrônicos',
+            title: 'Custos de fabricação',
             cover: 'https://picsum.photos/id/0/1000/300'
         },
         {
             id: 2,
-            title: 'Paisagens',
+            title: 'Cadastrar novo cliente',
             cover: 'https://picsum.photos/id/10/1000/300'
         },
         {
             id: 3,
-            title: 'Acessórios',
+            title: 'Ver custos salvos',
             cover: 'https://picsum.photos/id/21/1000/300'
+        },
+        {
+            id: 4,
+            title: 'Editar meu perfil',
+            cover: 'https://picsum.photos/id/10/1000/300'
         }
     ],
     products: [

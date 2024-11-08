@@ -20,7 +20,7 @@ export default()=>{
                 </View>
 
                 <View style={styles.containerBox}>
-                    <Box icon={iconCalculator} title="Custos de fabricação" nav="about" />
+                    <Box icon={iconCalculator} title="Custos de fabricação" nav="/categories/calc1" />
                     <Box icon={iconUser} title="Cadastrar novo cliente" nav="test" />
                     <Box icon={iconSave} title="Ver custos salvos" nav="about" />
                     <Box icon={iconProfile} title="Editar perfil" nav="profile"/>

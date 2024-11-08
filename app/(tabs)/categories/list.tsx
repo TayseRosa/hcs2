@@ -7,7 +7,6 @@ export default function Screen() {
 
     return(
         <View style={styles.container}>
-            <Text>Category</Text>
             <FlatList 
                 data={categories}
                 renderItem={({ item })=><CategoryItem data={item} />}

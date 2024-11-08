@@ -38,16 +38,6 @@ export default function TabLayout(){
                 }}
             />
 
-            <Tabs.Screen 
-                name="newClient" 
-                options={{
-                    title:'Novo cliente',
-                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="user" color={color}/>,
-                    headerShown:false
-                }}                
-            />
-
-
         </Tabs>
     )
 }
